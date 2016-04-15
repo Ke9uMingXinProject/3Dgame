@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.edu.dmgame.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:background="@drawable/banner_bg"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/toolbar_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:placeholderImage="@mipmap/ic_launcher"
+            app:roundAsCircle="true"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文章"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/tab_bar_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorFooter"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_bar_menu_chapter"
+            style="@style/main_tab_bar_footer"
+            android:drawableTop="@drawable/selector_chapter"
+            android:text="文章"/>
+
+        <RadioButton
+            android:id="@+id/tab_bar_menu_forum"
+            style="@style/main_tab_bar_footer"
+            android:drawableTop="@drawable/selector_forum"
+            android:text="论坛"/>
+
+        <RadioButton
+            android:id="@+id/tab_bar_menu_game"
+            style="@style/main_tab_bar_footer"
+            android:drawableTop="@drawable/selector_game"
+            android:text="游戏"/>
+
+
+        <RadioButton
+            android:id="@+id/tab_bar_menu_self"
+            style="@style/main_tab_bar_footer"
+            android:drawableTop="@drawable/selector_self"
+            android:text="我的"/>
+    </RadioGroup>
+
+</LinearLayout>
